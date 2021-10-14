@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>DDNS</Name>
+  <Repository>coderge/namecheap_ddns</Repository>
+  <Registry>https://hub.docker.com/r/coderge/namecheap_ddns</Registry>
+  <Network>host</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Overview>This simple container will update a namecheap dynamic dns domain. You must set an 'A + Dynamic DNS Record' for the host and enable Dynamic DNS in the manage page for your domain.</Overview>
+  <Icon/>
+  <Description>This simple container will update a namecheap dynamic dns domain. You must set an 'A + Dynamic DNS Record' for the host and enable Dynamic DNS in the manage page for your domain.</Description>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish/>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>HOST</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Name>DOMAIN</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Name>PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Name>INTERFACE</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Config Name="HOST" Target="HOST" Default="www" Mode="" Description="This is the host to be updated. e.g. 'www'." Type="Variable" Display="always" Required="true" Mask="false">work</Config>
+  <Config Name="DOMAIN" Target="DOMAIN" Default="yourdomain.com" Mode="" Description="This is the domain to be updated. e.g. 'yourdomain.com'." Type="Variable" Display="always" Required="true" Mask="false">coderge.com</Config>
+  <Config Name="PASSWORD" Target="PASSWORD" Default="**************" Mode="" Description="Your Dynamic DNS password. NOT your namecheap password." Type="Variable" Display="always" Required="true" Mask="false">2c69729b1b244ba99aac97476f3c410a</Config>
+  <Config Name="INTERFACE" Target="INTERFACE" Default="" Mode="" Description="The interface name which have a ipv4 address want to be upload." Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+</Container>
