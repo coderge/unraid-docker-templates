@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ShopeeWork</Name>
+  <Repository>node:16</Repository>
+  <Registry>https://hub.docker.com/_/node</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>true</Privileged>
+  <Support/>
+  <Project/>
+  <Overview>Work at shopee.</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:40001]</WebUI>
+  <TemplateURL/>
+  <Icon>https://logodownload.org/wp-content/uploads/2021/03/shopee-logo-0.png</Icon>
+  <ExtraParams>--hostname="ShopeeWork" -itd</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Work at shopee.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8899</HostPort>
+        <ContainerPort>8899</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8300</HostPort>
+        <ContainerPort>8300</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8001</HostPort>
+        <ContainerPort>8001</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>40001</HostPort>
+        <ContainerPort>40001</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>42131</HostPort>
+        <ContainerPort>42131</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8081</HostPort>
+        <ContainerPort>8081</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>3222</HostPort>
+        <ContainerPort>22</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/work/</HostDir>
+      <ContainerDir>/work</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/root/.ssh/</HostDir>
+      <ContainerDir>/root/.ssh/</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Work Dir" Target="/work" Default="/mnt/user/work/" Mode="rw" Description="Container Path: /work" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/work/</Config>
+  <Config Name="Whistle Port" Target="8899" Default="8899" Mode="tcp" Description="Container Port: 8899" Type="Port" Display="always" Required="false" Mask="false">8899</Config>
+  <Config Name="Code Server" Target="8300" Default="8300" Mode="tcp" Description="Container Port: 8300" Type="Port" Display="always" Required="false" Mask="false">8300</Config>
+  <Config Name="ZanProxy Proxy" Target="8001" Default="8001" Mode="tcp" Description="Container Port: 8001" Type="Port" Display="always" Required="false" Mask="false">8001</Config>
+  <Config Name="ZanProxy Web" Target="40001" Default="40001" Mode="tcp" Description="Container Port: 40001" Type="Port" Display="always" Required="false" Mask="false">40001</Config>
+  <Config Name="Nodejs Debug" Target="42131" Default="42131" Mode="tcp" Description="Container Port: 42131" Type="Port" Display="always" Required="false" Mask="false">42131</Config>
+  <Config Name="RN Debug" Target="8081" Default="8081" Mode="tcp" Description="Container Port: 8081" Type="Port" Display="always" Required="false" Mask="false">8081</Config>
+  <Config Name="SSH Port" Target="22" Default="3222" Mode="tcp" Description="Container Port: 22" Type="Port" Display="always" Required="false" Mask="false">3222</Config>
+  <Config Name="SSH Config" Target="/root/.ssh/" Default="/root/.ssh/" Mode="ro" Description="Container Path: /root/.ssh/" Type="Path" Display="advanced-hide" Required="false" Mask="false">/root/.ssh/</Config>
+</Container>
