@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Whistle</Name>
+  <Repository>adockero/whistle</Repository>
+  <Registry>https://hub.docker.com/r/adockero/whistle</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/avwo/whistle/issues</Support>
+  <Project>https://github.com/avwo/whistle</Project>
+  <Overview>HTTP, HTTP2, HTTPS, Websocket debugging proxy</Overview>
+  <Category>Tools: Network:Proxy</Category>
+  <WebUI>http://[IP]:[PORT:8899]</WebUI>
+  <TemplateURL/>
+  <Icon>https://user-images.githubusercontent.com/11450939/122700870-b0de4100-d27e-11eb-8d2a-46e352b49727.png</Icon>
+  <ExtraParams>-it</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1644217904</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>HTTP, HTTP2, HTTPS, Websocket debugging proxy</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8899</HostPort>
+        <ContainerPort>8899</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data/>
+  <Environment/>
+  <Labels/>
+  <Config Name="Proxy Port" Target="8899" Default="8899" Mode="tcp" Description="Container Port: 8899" Type="Port" Display="always" Required="true" Mask="false">8899</Config>
+</Container>
