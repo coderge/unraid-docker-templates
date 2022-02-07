@@ -13,7 +13,7 @@
   <Category/>
   <WebUI>http://[IP]:[PORT:40001]</WebUI>
   <TemplateURL/>
-  <Icon>https://logodownload.org/wp-content/uploads/2021/03/shopee-logo-0.png</Icon>
+  <Icon>https://raw.githubusercontent.com/coderge/unraid-docker-templates/main/icons/shopee-logo.jpg</Icon>
   <ExtraParams>--hostname="ShopeeWork" -itd</ExtraParams>
   <PostArgs/>
   <CPUset/>
