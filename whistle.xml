@@ -22,9 +22,16 @@
   <Description>HTTP, HTTP2, HTTPS, Websocket debugging proxy</Description>
   <Networking>
     <Mode>bridge</Mode>
-    <Publish/>
+    <Publish>
+      <Port>
+        <HostPort>8899</HostPort>
+        <ContainerPort>8899</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
   </Networking>
   <Data/>
   <Environment/>
   <Labels/>
+  <Config Name="Proxy Port" Target="8899" Default="8899" Mode="tcp" Description="Container Port: 8899" Type="Port" Display="advanced" Required="true" Mask="false">8899</Config>
 </Container>
