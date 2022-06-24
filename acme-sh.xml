@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>acme.sh</Name>
+  <Repository>neilpang/acme.sh</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/acmesh-official/acme.sh/issues</Support>
+  <Project>https://github.com/acmesh-official/acme.sh</Project>
+  <Overview>acme.sh --register-account -m xxx@xxx.com&#xD;
+acme.sh --issue --dns dns_cf -d xxx.com -d "*.xxx.com"</Overview>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://cdn-icons-png.flaticon.com/512/1034/1034503.png</Icon>
+  <ExtraParams>-it</ExtraParams>
+  <PostArgs>daemon</PostArgs>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Certs Directory" Target="/acme.sh" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="CF_Token" Target="CF_Token" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="CF_Account_ID" Target="CF_Account_ID" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+</Container>
